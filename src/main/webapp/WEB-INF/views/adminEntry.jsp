@@ -13,6 +13,7 @@
 
 body{
 	font-family:Verdana;
+	font-color:Black;
 }
 </style>
 </head>
@@ -26,7 +27,7 @@ body{
 <div class="row">
 <div class="col-md-2">&nbsp;</div>
 <div class="col-md-6">
-<div class="panel with-nav-tabs panel-primary">
+<div class="panel with-nav-tabs panel-success">
 <div class="panel-heading">
 <ul class="nav nav-tab">
 	<li class="col-md-4 active"><a href="#tab1" data-toggle="tab"><span id="t1">Supplier</span></a></li>
@@ -43,8 +44,8 @@ body{
 	<form method="post" action="saveSup" class="form-signin">
 	<span id="reauth-email" class="reauth-email"></span>
 	
- 	<h4 class="input-title">Supplier Id</h4> 
- 	<input class="form-control" type="number" name="sid" />
+ 	<!-- <h4 class="input-title">Supplier Id</h4> 
+ 	<input class="form-control" type="number" name="sid" />  -->
 	
 	<h4 class="input-title">Supplier Name</h4>
 	<input class="form-control" type="text" name="sname" />

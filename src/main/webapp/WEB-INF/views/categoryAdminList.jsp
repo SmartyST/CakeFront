@@ -20,20 +20,22 @@ font-family:Verdana;
 
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
-<div class="container">
+
+<div class="fluid-container table-responsive">
 <h2> Category List For Admin </h2>
 <hr>
 <table class="table table-hover" id="api" class="display" border="2" width="80" align="center">
 <thead>
 <tr>
-<th class="info">Index</th>
-<th>Id</th>
-<th>Name</th>
+<th>Index</th>
+<th>Category Id</th>
+<th>Category Name</th>
 <th class="danger">Action</th>
 </tr>
 </thead>
+
 <tbody>
-<c:if test="${empty catList }">
+<c:if test="${empty catList}">
 <tr>
 <td colspan="10" align="center"> No Record Exists!! </td>
 </tr>
@@ -43,11 +45,12 @@ font-family:Verdana;
 <tr>
 <td><c:out value="${st.count}"></c:out></td>
 <td><c:out value="${c.cid}"></c:out></td>
-<td><c:out value="${c.cname}"></c:out></td>
+<td><c:out value="${c.catname}"></c:out></td>
 <td class="span4">
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
-<a class="btn btn btn-info" role="button" href="${contextRoot}/admin/EditCategory">Edit</a>
-<a class="btn btn btn-danger" role="button" href="<c:url value="/admin/DeleteCategory/${c.cid}"/>">Delete</a></td>
+<!-- <a class="btn btn btn-info" role="button" href="${contextRoot}/Edit?sid=${cat.cid}"><span class="glyphicon glyphicon-pencil" style="color:red"></span></a>  -->
+<a class="btn btn btn-danger" role="button" href="/deleteCat/${cat.cid}"><span class="glyphicon glyphicon-remove" style="color:red"></span></a>
+</td>
 </tr>
 </c:forEach>
 </tbody>

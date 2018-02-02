@@ -98,6 +98,10 @@ public class adminController
 			prod.setDescription(req.getParameter("pDescription"));
 			prod.setQuality(req.getParameter("pQuality"));
 			prod.setStock(Integer.parseInt(req.getParameter("pStock")));
+			
+			System.out.println(req.getParameter("pSupplier"));
+			System.out.println(req.getParameter("pCategory"));
+			
 			prod.setCategory(categoryDaoImpl.findByCatId(Integer.parseInt(req.getParameter("pSupplier"))));
 			prod.setSupplier(supplierDaoImpl.findBySupId(Integer.parseInt(req.getParameter("pCategory"))));
 			
@@ -106,10 +110,11 @@ public class adminController
 			prod.setImgname(filename);
 			//productDaoImpl.insertProduct(prod);
 			System.out.println(filepath);
+			
 			try {
 				byte[] bfiles = file.getBytes();
 				BufferedOutputStream bos = new BufferedOutputStream(
-						new FileOutputStream(filepath + "/webapp/images/Productimage" + filename));
+						new FileOutputStream(filepath + "/resources/items/" + filename));
 				bos.write(bfiles);
 				bos.close();
 			} catch (IOException e) {

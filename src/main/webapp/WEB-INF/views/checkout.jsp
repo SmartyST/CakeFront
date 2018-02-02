@@ -33,6 +33,7 @@ body{
 <c:set var="gtot" value="${gtot + c.cartPrice * c.cartStock}"></c:set>
 </c:forEach>
 <div class="well">
+
 <table>
 <tr>
 <td colspan="3">Name: </td><td>${user.name}</td>
@@ -43,7 +44,6 @@ body{
 <tr>
 <td colspan="3">Address: </td><td>${user.address}</td>
 </tr>
-
 </table>
 
 <div class="outer">

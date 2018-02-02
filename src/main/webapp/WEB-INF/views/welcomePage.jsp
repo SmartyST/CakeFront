@@ -47,19 +47,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="<c:url value="/images/Cake01.jpg/"></c:url>" alt="Cake">    
+        <img src="<c:url value="/resources/Cake01.jpg/"></c:url>" alt="Cake">    
       </div>
       <div class="item">
-        <img src="<c:url value="/images/Cake02.jpg/"></c:url>" alt="Cake">    
+        <img src="<c:url value="/resources/Cake02.jpg/"></c:url>" alt="Cake">    
       </div>
       <div class="item">
-        <img src="<c:url value="/images/Cake03.jpg/"></c:url>" alt="Cake">    
+        <img src="<c:url value="/resources/Cake03.jpg/"></c:url>" alt="Cake">    
       </div>
       <div class="item">
-        <img src="<c:url value="/images/Cake04.jpg/"></c:url>" alt="Cake">    
+        <img src="<c:url value="/resources/Cake04.jpg/"></c:url>" alt="Cake">    
       </div>
       <div class="item">
-        <img src="<c:url value="/images/Cake05.jpg/"></c:url>" alt="Cake">    
+        <img src="<c:url value="/resources/Cake05.jpg/"></c:url>" alt="Cake">    
       </div>
     </div>
 
@@ -72,6 +72,8 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <jsp:include page="footer.jsp"></jsp:include>
 </div>
 
 

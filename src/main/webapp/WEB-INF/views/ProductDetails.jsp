@@ -26,7 +26,7 @@ body{
 	<div class="row">
 	<div class="col-sm-4 item-photo">
 	<img style="max-width: 100%; margin-top: 30px;"
-	src="${pageContext.request.contextPath}/image/${prod.imgName}"/>
+	alt="${prod.imgname}" src="<c:url value="/resources/items/${prod.imgname}"></c:url>"/>
 	</div>
 	
 	<div class="col-sm-5" style="border:0px solid gray">
@@ -39,9 +39,9 @@ body{
 	<input type="hidden" value="${prod.pid }" name="pid"/>
 	<input type="hidden" value="${prod.price }" name="pPrice"/>
 	<input type="hidden" value="${prod.pname }" name="pName"/>
-	<input type="hidden" value="${prod.imgName }" name="imgName"/>
+	<input type="hidden" value="${prod.imgname }" name="imgName"/>
 	
-	<label>Qty</label><input type="number" class="form-control" name="pQty" requried/><br><br>
+	<label>Qty</label><input type="number" class="form-control" name="pQty" requried="requried"/><br><br>
 	<input class="btn btn-warning btn-lg" type="submit" value="Add Cart">
 	<h6><span class="glyphicon-heart-empty" style="cursor: pointer;"></span>Wish List</h6>
 	<span><a class="btn btn-success" href="productBuy?pid=${prod.pid}">BUY</a></span>

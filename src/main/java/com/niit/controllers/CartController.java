@@ -56,6 +56,7 @@ public class CartController
 	{
 		ModelAndView mv = new ModelAndView();
 		Principal principal = req.getUserPrincipal();
+		System.out.println(principal);
 		String username = principal.getName();
 		System.out.println("the username::"+username);
 		try{
@@ -100,6 +101,7 @@ public class CartController
 			return mv;
 		}
 	}
+	
 	
 	@RequestMapping("/deleteCart")
 	public ModelAndView deleteItemCart(@RequestParam("cartid")int cid,HttpServletRequest req){

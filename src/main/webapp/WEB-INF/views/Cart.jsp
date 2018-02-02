@@ -55,7 +55,7 @@ body{
 
 <tr>
 <td>
-<a class="btn btn-warning" href="${pageContext.request.contextPath}/HomePage">Continue Shopping...</a>
+<a class="btn btn-warning" href="${pageContext.request.contextPath}/Home">Continue Shopping...</a>
 <a class="btn btn-success" href="${pageContext.request.contextPath}/checkout">Checkout</a>
 </td>
 </tr>

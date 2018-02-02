@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Display Product List</title>
+<title>Product List</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,20 +26,23 @@ body{
 <table class="table table-hover table-striped" id="api">
 <thead>
 <tr>
-<th class="info">Index</th>
+<th>Sr. NO</th>
 <th>Product Id</th>
 <th>Product Name</th>
 <th>Product Description</th>
 <th>Price</th>
 <th>Image</th>
+<th>Action</th>
 </tr>
 </thead>
+
 <tbody>
 <c:if test="${empty prodList}">
 <tr align="center">
 <td colspan="10">No Record Exists!!!</td>
 </tr>
 </c:if>
+
 <c:forEach var="p" varStatus="st" items="${prodList}">
 <tr>
 <td><c:out value="${st.count}"></c:out></td>
@@ -49,6 +52,10 @@ body{
 <td><c:out value="${p.price }"></c:out></td>
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
 <td><img src="<c:url value="/resources/items/${p.imgname}"/>" height="50px" width="50px" ></td>
+<td class="span2">
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
+<a class="btn btn-info" role="button" href="<c:url value="/productDetail/${p.pid}"/>">Details</a>
+</td>
 </tr>
 </c:forEach>
 </tbody>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -69,6 +70,21 @@ public class IndexController
 		return "Error";
 	}
 	
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
+	
+	@RequestMapping("/product")
+	public String prod() {
+		return "product";
+	}
+	
+	@RequestMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
+	
 	@RequestMapping(value = "/Register", method = RequestMethod.GET)
 	public ModelAndView gotoRegisterPage() {
 		ModelAndView mv = new ModelAndView();
@@ -117,8 +133,8 @@ public class IndexController
 		return mv;
 	}
 	
-	@RequestMapping("/productDetail")
-	public ModelAndView displayProductsDetails(@RequestParam("pid")int pid){
+	@RequestMapping("/productDetail/{pid}")
+	public ModelAndView displayProductsDetails(@PathVariable("pid")int pid){
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("prod", productDaoImpl.findByProdId(pid)).isEmpty();
 		Product lp = productDaoImpl.findByProdId(pid); 

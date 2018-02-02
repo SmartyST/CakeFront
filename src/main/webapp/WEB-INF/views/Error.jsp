@@ -8,13 +8,21 @@
 <style type="text/css">
 
 body{
-	font-family:Verdana;
+	font-family:Palatino Linotype;
 }
+
 </style>
 </head>
 <body>
-<b style="size: 100px">Access Denied!!!</b>
-<h1>You are not an authorized User!!!</h1>
+
+<p><b><font color="#e60000" size="6">Unauthorized !! Access is denied due to invalid credentials.</font></b></p>
+
+<p><b><font size="5">You do not have permission to view this directory or page using the credentials that you supplied. 
+</b></p>
+
 <h3>Click <a href="${pageContext.request.contextPath}/reLogin">here</a> to go back to login</h3>
+<h4>OR</h4>
+<h3>Click <a href="${pageContext.request.contextPath}/Home">here</a> to go back to Home</h3>
+
 </body>
 </html>

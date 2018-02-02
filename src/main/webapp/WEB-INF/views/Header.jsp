@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
   <title>Cake World | The Cake Shop</title>
+  <link rel="icon" href="<c:url value="/resources/favicon.png"/>" type="image/png" sizes="16x16">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -37,7 +38,7 @@
         <span class="icon-bar"></span>                        
         </button>
 		
-		<a class="navbar-brand" href="Home"><img src="<c:url value="/images/log.jpg/"></c:url>" alt="logo"> </a>
+		<a class="navbar-brand" href="Home"><img src="<c:url value="/resources/log.jpg/"></c:url>" alt="logo"> </a>
 		
 	</div>
 	
@@ -47,7 +48,7 @@
         	Boolean ses1 = request.isUserInRole("ROLE_ADMIN");
         %>
         <li class="active"><a href="${pageContext.request.contextPath}/Home">Home</a></li>
-        <li><a href="#">Our Product</a></li>
+        <li><a href="product">Our Product</a></li>
         
         <li><a href="goAEntry">Admin</a></li>
         
@@ -68,9 +69,9 @@
         </ul>
       	</li>
       	
-      	<li><a href="About">About</a></li>
+      	<li><a href="about">About</a></li>
       	
-        <li><a href="Contact">Contact Us</a></li>
+        <li><a href="contact">Contact Us</a></li>
         
   </ul>
   
