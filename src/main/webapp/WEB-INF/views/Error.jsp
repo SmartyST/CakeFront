@@ -24,5 +24,6 @@ body{
 <h4>OR</h4>
 <h3>Click <a href="${pageContext.request.contextPath}/Home">here</a> to go back to Home</h3>
 
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

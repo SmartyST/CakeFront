@@ -20,7 +20,7 @@
 			<button type="button" class="close" data-dismiss="modal">X</button>
 			</div>
 			<div class="modal-body">Added Successfully!!!</div>
-			<div class="modal-footer"><a href="goAEntry" class="btn btn-primary" role="button"></a></div>
+			<div class="modal-footer"><a href="goAEntry" class="btn btn-primary" role="button">Ok</a></div>
 		</div>
 		</div>
 </div>

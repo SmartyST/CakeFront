@@ -47,12 +47,12 @@ body{
 <td class="span4">
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
 <!-- <a class="btn btn btn-info" role="button" href="${contextRoot}/admin/EditSupplier">Edit</a>  -->
-<a class="btn btn btn-danger" role="button" href="deleteSup/${sup.sid}">Delete</a></td>
+<a class="btn btn btn-danger" role="button" href="deleteSup/${s.sid}">Delete</a></td>
 </tr>
 </c:forEach>
 </table>
 
 </div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

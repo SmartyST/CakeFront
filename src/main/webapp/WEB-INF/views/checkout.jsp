@@ -55,7 +55,7 @@ body{
 <option value="Net">Net Banking</option>
 </select><br><br>
 <div>
-<div><label for="name-on-card">Name:</label><input type="text" name="name-on-card" style="height:30px;"></div>
+<div><label for="name-on-card">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name-on-card" style="height:30px;"></div>
 <div><label for="card-number">Card Number:</label><input type="number" name="card-number" style="height:30px;"></div><br>
 <div><input type="hidden" name="total" value="${gtot}"> </div>
 </div>
@@ -71,6 +71,6 @@ body{
 
 </div>
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

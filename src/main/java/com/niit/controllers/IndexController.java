@@ -116,6 +116,7 @@ public class IndexController
 		if(req.isUserInRole("ROLE_ADMIN")){
 			hs = req.getSession();
 			hs.setAttribute("sess",req.getUserPrincipal().getName());
+			hs.setAttribute("adminlogged", true);
 		}
 		
 		hs.setAttribute("catList", categoryDaoImpl.retrieve());

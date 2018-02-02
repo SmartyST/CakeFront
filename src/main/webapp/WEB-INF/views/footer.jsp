@@ -21,10 +21,10 @@ footer{
     height:300px;
     position:absolute;
     width:100%;
-    bottom:0;
+    
     font-weight:lighter;
     color:black;
-    margin: 0 auto -50px;
+    
 }
 .footerHeader{
     width:100%;

@@ -28,22 +28,19 @@ body{
 
 			<br>
 			<div class='form-row'>
-				&emsp;<label class="control-label">Customer Name: </label> ${user.name}
+				<label class="control-label">Customer Name: </label> ${user.name}
 			</div>
 			
 			<div class='form-row'>
-				&emsp;<label class='control-label'>Customer Email: </label>&nbsp;${user.email}
+				<label class='control-label'>Customer Email: </label> ${user.email}
 			</div>
 			
 			<div class='form-row'>
-				&emsp;<label class='control-label'>Shipping Address: </label>&nbsp;${user.address}
+				<label class='control-label'>Shipping Address: </label> ${user.address}
 			</div>
 
 			<div class='form-row'>
-				&emsp;<label class='control-label'>Amount Payable: </label>&nbsp;Rs. ${gtot}
-			</div>
-			<div class='form-row'>
-				&emsp;<label class='control-label'>Date of Delivery:
+				<label class='control-label'>Date of Delivery:
 					Delivered within 3-5 working days</label>
 			</div>
 			<br>
@@ -54,9 +51,7 @@ body{
 	
 	</div>
 
-
-
 </div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

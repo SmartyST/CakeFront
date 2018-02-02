@@ -13,13 +13,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
 <style>
-  .wrapper {
+  wrapper {
   column-count: 1;
   column-gap: 30px;
   padding: 20px;
 }
 
-.star {
+star {
   float: left;
   width: 300px;
   shape-margin:20px;
@@ -137,7 +137,7 @@ background-color: #e6e6e6;
 	
 	</div>
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 
 

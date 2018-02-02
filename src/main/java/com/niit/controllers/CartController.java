@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,7 @@ import com.Dao.SupplierDao;
 import com.Dao.UserDao;
 import com.model.Cart;
 import com.model.Orders;
+import com.model.Product;
 import com.model.User;
 
 @Controller
@@ -52,9 +54,9 @@ public class CartController
 	}
 	
 	@RequestMapping(value="/addToCart",method=RequestMethod.POST)
-	public ModelAndView addToCart(HttpServletRequest req)
+	public String addToCart(HttpServletRequest req,Model mv)
 	{
-		ModelAndView mv = new ModelAndView();
+		
 		Principal principal = req.getUserPrincipal();
 		System.out.println(principal);
 		String username = principal.getName();
@@ -63,6 +65,15 @@ public class CartController
 			int pid = Integer.parseInt(req.getParameter("pid"));
 			Double price = Double.parseDouble(req.getParameter("pPrice"));
 			int qty = Integer.parseInt(req.getParameter("pQty"));
+			Product prodstock = productDaoImpl.findByProdId(pid);
+			
+			int stock = prodstock.getStock();
+			if(qty > stock || qty == 0)
+			{
+				
+				return "redirect:/productDetail/"+pid;
+			}
+			
 			String pname = req.getParameter("pName");
 			String imgName = req.getParameter("imgName");
 			Cart cartExist = cartDaoImpl.getByCartID(pid,username);
@@ -91,14 +102,14 @@ public class CartController
 				cm.setCartUserDetails(u);
 				cartDaoImpl.updateCart(cm);
 			}
-			mv.addObject("cartInfo",cartDaoImpl.findByCartID(username));
-			mv.setViewName("Cart");
-			return mv;
+			mv.addAttribute("cartInfo",cartDaoImpl.findByCartID(username));
+			//mv.setViewName("Cart");
+			return "Cart";
 		}catch (Exception e) {
 			e.printStackTrace();
-			mv.addObject("cartInfo",cartDaoImpl.findByCartID(username));
-			mv.setViewName("Cart");
-			return mv;
+			mv.addAttribute("cartInfo",cartDaoImpl.findByCartID(username));
+			//mv.setViewName("Cart");
+			return "Cart";
 		}
 	}
 	
@@ -144,7 +155,8 @@ public class CartController
 		Double total = Double.parseDouble(req.getParameter("total"));
 		String payment = req.getParameter("payment");
 		User u = userDaoImpl.findUserByName(username);
-		order.setUser(u);
+		mv.addObject("user", u);
+		//order.setUser(u);
 		order.setTotal(total);
 		order.setPayment(payment);
 		ordersDaoImpl.insertOrders(order);

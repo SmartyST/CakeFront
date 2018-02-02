@@ -21,19 +21,29 @@
 
 <div class="container">
 <form id="f1" action="addToCart" method="post">
-  <h2>Our Products</h2>
+  <center><h2>Our Products</h2></center>
+  
+ <ul>
+   <li class="dropdown"><a class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" href="#">&nbsp;&nbsp;&nbsp; Product Category &nbsp;&nbsp;&nbsp;<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <c:forEach var="catVal" items="${catList}">
+        	<li><a href="${pageContext.request.contextPath}/prodCatList?cid=${catVal.cid}">${catVal.catname}</a></li>
+        	<li class="divider"></li>
+        </c:forEach>
+       </ul>
+    </li>
+ </ul> <br><br><br>
 
   <!-- 1st row - 1 -->
   
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
-        
-          <img src="<c:url value="/resources/Product/RegularCakes/regular (1).jpg/"></c:url>" alt="Image" style="width:100%">
-             
+        <a href="Cake02.jpg" target="_blank">
+          <img src="<c:url value="/resources/items/regular (1).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="addToCart" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Choca Moca</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -45,11 +55,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/RegularCakes/regular (1).PNG/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/regular (1).PNG/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Choco Chips</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -61,10 +71,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/RegularCakes/regular (6).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/regular (6).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Royal Swiss</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -78,10 +88,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/KidsCakes/kids (1).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/kids (1).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>2 TIER Kids cake</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -93,11 +103,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/KidsCakes/kids (3).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/kids (3).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Barbie Girl</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -109,10 +119,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/KidsCakes/kids (9).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/kids (9).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>1 No. Cake</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -126,10 +136,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/3D/3D (2).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/3D (2).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Jwellery Cake.</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -141,11 +151,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/3D/3D (8).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/3D (8).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Hukkha Cake</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -157,10 +167,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/3D/3D (3).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/3D (3).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Crown Cake</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -174,10 +184,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/CommunionCake/com_2.jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/com_2.jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Christmas cake 1.</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -189,11 +199,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-         <img src="<c:url value="/resources/Product/CommunionCake/com_3.jpg/"></c:url>" alt="Image" style="width:100%">
+         <img src="<c:url value="/resources/items/com_1.jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Christmas cake 2</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -205,10 +215,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/CommunionCake/com_4.jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/com_4.jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Christmas cake 3</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -222,10 +232,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/BabyShowerCakes/baby (5).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/baby (5).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Sofa Cake</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -237,11 +247,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-         <img src="<c:url value="/resources/Product/BabyShowerCakes/baby (8).jpg/"></c:url>" alt="Image" style="width:100%">
+         <img src="<c:url value="/resources/items/baby (8).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Baby Cake 1 </p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -253,10 +263,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/BabyShowerCakes/baby (11).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/baby (11).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Baby Cake 2</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -270,10 +280,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/WeddingCakes/Weeding (2).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/Weeding (2).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Weeding Cake 1 </p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -285,11 +295,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-         <img src="<c:url value="/resources/Product/WeddingCakes/Weeding (5).jpg/"></c:url>" alt="Image" style="width:100%">
+         <img src="<c:url value="/resources/items/Weeding (5).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Weeding Cake 2</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -301,10 +311,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/WeddingCakes/Weeding (11).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/Weeding (11).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Weeding Cake 3</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -318,10 +328,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake01.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/LuxuryCollection/Lx (8).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/Lx (8).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Luxury Collection 1</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -333,11 +343,11 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake02.jpg" target="_blank">
-         <img src="<c:url value="/resources/Product/LuxuryCollection/Lx (9).jpg/"></c:url>" alt="Image" style="width:100%">
+         <img src="<c:url value="/resources/items/Lx (9).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
+            <p>Luxury Collection 2</p>
 
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -349,10 +359,10 @@
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="Cake03.jpg" target="_blank">
-          <img src="<c:url value="/resources/Product/LuxuryCollection/Lx (11).jpg/"></c:url>" alt="Image" style="width:100%">
+          <img src="<c:url value="/resources/items/Lx (11).jpg/"></c:url>" alt="Image" style="width:100%">
           <div class="caption">
-            <p>Cake Name.</p>
-			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-ok"></span> Buy </a>
+            <p>Luxury Collection 3</p>
+			<p><a href="#" class="btn btn-danger" role="button"> <span class="glyphicon glyphicon-eye-open"></span> Details </a>
             <a href="#" class="btn btn-primary" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a></p>
           </div>
         </a>
@@ -364,7 +374,7 @@
 </div>
 
    <div id="Footer">
-   
+   <jsp:include page="footer.jsp"></jsp:include>
    </div>
 
 </body>

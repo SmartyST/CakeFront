@@ -41,7 +41,7 @@ body{
 	<input type="hidden" value="${prod.pname }" name="pName"/>
 	<input type="hidden" value="${prod.imgname }" name="imgName"/>
 	
-	<label>Qty</label><input type="number" class="form-control" name="pQty" requried="requried"/><br><br>
+	<label>Qty</label><input type="number" min="1" class="form-control" name="pQty" requried="requried"/><br><br>
 	<input class="btn btn-warning btn-lg" type="submit" value="Add Cart">
 	<h6><span class="glyphicon-heart-empty" style="cursor: pointer;"></span>Wish List</h6>
 	<span><a class="btn btn-success" href="productBuy?pid=${prod.pid}">BUY</a></span>
@@ -53,8 +53,7 @@ body{
 	<hr>
 	<h3>Product Details</h3>
 	<ul class="menu-items">
-	<li> We can deliver a cake within 4 hrs depending upon the availability of cake.</li>
-	<li> You can select Express delivery as shipping method on check out page.</li>
+	<li> We can deliver a cake within 6 hrs depending upon the availability of cake.</li>
 	<li> If the selected cake is not available order will be cancelled automatically.</li>
 	<li> Since all cakes are Hand made, the actual cake may differ from the cake shown in picture.</li>
 	</ul>
@@ -62,5 +61,6 @@ body{
 	</div>
 	</div>
 </div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

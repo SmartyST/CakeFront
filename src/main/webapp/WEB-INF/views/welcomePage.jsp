@@ -33,7 +33,6 @@
 <body>
 
 <jsp:include page="Header.jsp"></jsp:include>
-
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -72,7 +71,7 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
     <jsp:include page="footer.jsp"></jsp:include>
 </div>
 

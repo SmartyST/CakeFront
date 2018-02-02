@@ -48,7 +48,6 @@ font-family:Verdana;
 	<h3>Product Details</h3>
 	<ul class="menu-items">
 	<li> We can deliver a cake within 4 hrs depending upon the availability of cake.</li>
-	<li> You can select Express delivery as shipping method on check out page.</li>
 	<li> If the selected cake is not available order will be cancelled automatically.</li>
 	<li> Since all cakes are Hand made, the actual cake may differ from the cake shown in picture.</li>
 	</ul>
@@ -58,5 +57,6 @@ font-family:Verdana;
 <div class="col-sm-4" style="margin-right: 100px;">
 <h6>All Product are from a trusted vendor.</h6>
 </div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

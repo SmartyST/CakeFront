@@ -44,14 +44,13 @@
 	
 	  <div class="collapse navbar-collapse" id="myNavbar">
    <ul class="nav navbar-nav">
-       <%
-        	Boolean ses1 = request.isUserInRole("ROLE_ADMIN");
-        %>
+       
         <li class="active"><a href="${pageContext.request.contextPath}/Home">Home</a></li>
         <li><a href="product">Our Product</a></li>
-        
+   
         <li><a href="goAEntry">Admin</a></li>
         
+       <c:if test="${pageContext.request.userPrincipal.name!=null}">
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin List<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -60,8 +59,10 @@
             <li><a href="categoryList">Category</a></li>
           </ul>
         </li>
+        </c:if>
+       
         
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
         <ul class="dropdown-menu">
         <c:forEach var="catVal" items="${catList}">
         	<li><a href="${pageContext.request.contextPath}/prodCatList?cid=${catVal.cid}">${catVal.catname}</a></li>
@@ -76,7 +77,14 @@
   </ul>
   
   <ul class="nav navbar-nav navbar-right">
-  		<li><a href="showCart"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a></li>
+  
+  <c:if test="${pageContext.request.userPrincipal.name!=null}">
+  <li><a href="showCart"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a></li>
+  
+  </c:if>
+  
+  
+  		
       <c:if test="${pageContext.request.userPrincipal.name==null}">
         <li><a href="Register"><span class="loginButton"><span class="glyphicon glyphicon-user"></span> Sign Up</span></a></li>
         <li><a href="goToLogin"><span class="signInButton"><span class="glyphicon glyphicon-log-in"></span> Log In</span></a></li>

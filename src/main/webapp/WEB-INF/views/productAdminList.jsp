@@ -80,6 +80,6 @@ background-color: #f2f2f2;
 </table>
 
 </div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
